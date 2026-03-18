@@ -1,13 +1,14 @@
 package org.qusilon;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class App {
-    static void main(String[] args) {
+    static void main(String[] args) throws IOException{
         runMenu();
     }
 
-    static void runMenu() {
+    static void runMenu() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Добро пожаловать в игру Виселица!");
         while (true) {
@@ -19,7 +20,7 @@ public class App {
             System.out.println();
 
             if (choice.equals("1")) {
-                System.out.println("Тут будет игра");
+                WordProvider.getWord();
             } else if (choice.equals("0")) {
                 scanner.close();
                 break;
