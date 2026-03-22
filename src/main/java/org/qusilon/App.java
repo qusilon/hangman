@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class App {
-    static void main(String[] args) throws IOException{
+    static void main(String[] args) throws IOException {
         runMenu();
     }
 
@@ -20,7 +20,8 @@ public class App {
             System.out.println();
 
             if (choice.equals("1")) {
-                WordProvider.getWord();
+                Game game = new Game();
+                game.start();
             } else if (choice.equals("0")) {
                 scanner.close();
                 break;
